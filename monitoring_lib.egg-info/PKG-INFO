@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: monitoring_lib
-Version: 0.1.0
-Summary: HTTP monitoring tools
-License: MIT
-Description-Content-Type: text/markdown
-Requires-Dist: confluent_kafka
-
-# HTTPMonitoring
