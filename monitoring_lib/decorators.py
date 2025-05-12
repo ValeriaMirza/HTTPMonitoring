@@ -25,14 +25,8 @@ def log_to_kafka(view_func):
       "user_id": request.user.id if request.user.is_authenticated else None,
       "timestamp":datetime.now().isoformat() + "Z",
       "ip_address": get_client_ip(request),
-
     }
 
     kafka_logger.send_log(log_data)
     return response
   return wrapper
-
-
-
-
-
