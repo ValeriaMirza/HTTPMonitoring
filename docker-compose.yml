@@ -38,3 +38,14 @@ services:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     depends_on:
       - elasticsearch
+
+  sftp:
+    image: atmoz/sftp:latest
+    ports:
+      - "2222:22"
+    volumes:
+      - sftp-data:/home/sftpuser/upload
+    command: user:pass:::upload
+
+volumes:
+  sftp-data:
