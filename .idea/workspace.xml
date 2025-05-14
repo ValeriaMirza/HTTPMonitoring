@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f4ddcc2-3e79-4634-a823-3f5379526a27" name="Changes" comment="Update decorators">
-      <change afterPath="$PROJECT_DIR$/alert_service/alert_notification.py" afterDir="false" />
+    <list default="true" id="8f4ddcc2-3e79-4634-a823-3f5379526a27" name="Changes" comment="Add alert service">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/monitoring_lib-0.1.0-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/monitoring_lib-0.1.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring_lib.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring_lib.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring_lib.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring_lib.egg-info/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring_lib.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring_lib/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring_lib/decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alert_service/alert_notification.py" beforeDir="false" afterPath="$PROJECT_DIR$/alert_service/alert_notification.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="update-decorators" />
+        <entry key="$PROJECT_DIR$" value="create-alert-service" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,7 +54,7 @@
     "Python.alert_notification.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "create-alert-service",
+    "git-widget-placeholder": "update-alert-service",
     "last_opened_file_path": "C:/Users/Lena Nazarova/Desktop/HTTPMonitoring"
   }
 }]]></component>
@@ -121,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747053068676</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add alert service">
+      <option name="closed" value="true" />
+      <created>1747199414595</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747199414595</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +152,7 @@
     <MESSAGE value="Create docker-compose" />
     <MESSAGE value="Rebuild library" />
     <MESSAGE value="Update decorators" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update decorators" />
+    <MESSAGE value="Add alert service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add alert service" />
   </component>
 </project>
