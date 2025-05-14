@@ -1,13 +1,18 @@
+import os
+from dotenv import load_dotenv
+
 import json
 import time
 
 import requests
 from elasticsearch8 import Elasticsearch
 
-ELASTICSEARCH_URL = "http://localhost:9200"
-ELASTICSEARCH_INDEX = "monitoring-logs"
-TELEGRAM_BOT_TOKEN = "8135071449:AAHcDej2ZWYz6Vj79DPQZbn-Pba6-Yq43-4"
-TELEGRAM_CHAT_ID = "880872731"
+load_dotenv()
+ELASTICSEARCH_URL = os.getenv("ELASTICSEARCH_URL")
+ELASTICSEARCH_INDEX = os.getenv("ELASTICSEARCH_INDEX")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+
 
 elastic = Elasticsearch(hosts=[ELASTICSEARCH_URL])
 seen_logs = set()
