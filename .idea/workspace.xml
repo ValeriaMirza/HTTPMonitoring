@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f4ddcc2-3e79-4634-a823-3f5379526a27" name="Changes" comment="Rebuild library">
+    <list default="true" id="8f4ddcc2-3e79-4634-a823-3f5379526a27" name="Changes" comment="Update decorators">
+      <change afterPath="$PROJECT_DIR$/alert_service/alert_notification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/monitoring_lib-0.1.0-py3-none-any.whl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/monitoring_lib-0.1.0.tar.gz" beforeDir="false" />
@@ -30,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="create_docker_compose" />
+        <entry key="$PROJECT_DIR$" value="update-decorators" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,10 +58,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.alert_notification.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "update-decorators",
-    "last_opened_file_path": "C:/Users/Lena Nazarova/Desktop/Store"
+    "git-widget-placeholder": "create-alert-service",
+    "last_opened_file_path": "C:/Users/Lena Nazarova/Desktop/HTTPMonitoring"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -111,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747044928336</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update decorators">
+      <option name="closed" value="true" />
+      <created>1747053068676</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747053068676</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create docker-compose" />
     <MESSAGE value="Rebuild library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rebuild library" />
+    <MESSAGE value="Update decorators" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update decorators" />
   </component>
 </project>
