@@ -3,9 +3,11 @@ from dotenv import load_dotenv
 
 import json
 import time
-
 import requests
+
 from elasticsearch8 import Elasticsearch
+import redis
+
 
 load_dotenv()
 ELASTICSEARCH_URL = os.getenv("ELASTICSEARCH_URL")
@@ -14,8 +16,18 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 
+
 elastic = Elasticsearch(hosts=[ELASTICSEARCH_URL])
-seen_logs = set()
+
+r = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+
+
+def is_seen(log_id):
+  return r.sismember("seen_logs", log_id)
+
+
+def mark_seen(log_id):
+  r.sadd("seen_logs", log_id)
 
 def create_index():
   if not elastic.indices.exists(index=ELASTICSEARCH_INDEX):
@@ -60,10 +72,10 @@ def main():
 
         for log in problematic_logs:
             log_id = log["_id"]
-            if log_id not in seen_logs:
+            if not is_seen(log_id):
                 message = f" *Problematic log:* ```\n{json.dumps(log['_source'], indent=2)}```"
                 send_alert_tg(message)
-                seen_logs.add(log_id)
+                mark_seen(log_id)
 
         time.sleep(10)
 
