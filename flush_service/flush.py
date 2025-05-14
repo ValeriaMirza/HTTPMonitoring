@@ -3,7 +3,7 @@ import time
 import zipfile
 from datetime import datetime, timedelta
 import pytz
-from elasticsearch import Elasticsearch
+from elasticsearch8 import Elasticsearch
 import paramiko
 import os
 

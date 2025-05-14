@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f4ddcc2-3e79-4634-a823-3f5379526a27" name="Changes" comment="Add alert service">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8f4ddcc2-3e79-4634-a823-3f5379526a27" name="Changes" comment="Update alert service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alert_service/alert_notification.py" beforeDir="false" afterPath="$PROJECT_DIR$/alert_service/alert_notification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flush_service/flush.py" beforeDir="false" afterPath="$PROJECT_DIR$/flush_service/flush.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="create-alert-service" />
+        <entry key="$PROJECT_DIR$" value="update-alert-service" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.alert_notification.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "update-alert-service",
-    "last_opened_file_path": "C:/Users/Lena Nazarova/Desktop/HTTPMonitoring"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.alert_notification.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-redis&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lena Nazarova/Desktop/HTTPMonitoring&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -122,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747199414595</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update alert service">
+      <option name="closed" value="true" />
+      <created>1747200203332</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747200203332</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +162,7 @@
     <MESSAGE value="Rebuild library" />
     <MESSAGE value="Update decorators" />
     <MESSAGE value="Add alert service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add alert service" />
+    <MESSAGE value="Update alert service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update alert service" />
   </component>
 </project>

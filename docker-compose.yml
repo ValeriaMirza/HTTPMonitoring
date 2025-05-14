@@ -47,5 +47,13 @@ services:
       - sftp-data:/home/sftpuser/upload
     command: user:pass:::upload
 
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
 volumes:
   sftp-data:
+  redis-data:
