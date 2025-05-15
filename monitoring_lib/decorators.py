@@ -21,7 +21,7 @@ def log_to_kafka(view_class):
         error = None
         response = None
         request_data = {}
-
+        response_data = None
 
         if request.method in {'POST', 'PUT', 'PATCH'}:
             try:
@@ -29,12 +29,21 @@ def log_to_kafka(view_class):
                     request_data = json.loads(request.body.decode('utf-8'))
                 else:
                     request_data = dict(request.data)
-            except Exception as e:
+            except Exception:
                 request_data = {}
 
         try:
             response = original_dispatch(self, request, *args, **kwargs)
             status_code = getattr(response, 'status_code', 500)
+
+            try:
+                if hasattr(response, 'data'):
+                    response_data = response.data
+                elif hasattr(response, 'content'):
+                    response_data = json.loads(response.content.decode('utf-8'))
+            except Exception:
+                response_data = "Unserializable or non-JSON response"
+
             return response
 
         except Exception as e:
@@ -52,6 +61,7 @@ def log_to_kafka(view_class):
                     data[k] = v
 
             log_data = {
+                "api_name": self.__class__.__name__,
                 "method": request.method,
                 "path": request.path,
                 "status": status_code if status_code else "unknown",
@@ -60,13 +70,13 @@ def log_to_kafka(view_class):
                 "timestamp": datetime.now(ZoneInfo("UTC")).isoformat(),
                 "ip_address": get_client_ip(request),
                 "request_data": data,
+                "response_data": response_data,
             }
 
             if error:
                 log_data["error"] = error
 
             kafka_logger.send_log(log_data)
-
 
     view_class.dispatch = wrapper
     return view_class
